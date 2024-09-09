@@ -5,18 +5,48 @@ html,body {
     height: 100%;
     padding: 0;
 }
-.wrap {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .container {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+    height: 50%;
     width: 60%;
-    height: 60%;
     border: solid 3px whitesmoke;
     border-radius: 10px;
-    background-color: darkblue;
+    background-color: slategray;
+}
+.wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    padding: 2%;
+    margin: auto;
+    height: 93%;
+}
+.container-slides {
+
 }
 .slides {
     display: none;
+}
+.low {
+    display: flex;
+    flex-direction: row;
+}
+.description {
+    width: 70%;
+}
+.dots {
+    width: 30%;
+    text-align: end;
+}
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: darkblue;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
