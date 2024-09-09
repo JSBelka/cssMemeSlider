@@ -7,13 +7,13 @@ html,body {
 }
 .container {
     position: absolute;
-    left: 20%;
+    left: 27%;
     top: 25%;
     height: 50%;
-    width: 60%;
+    width: 46%;
     border: solid 3px whitesmoke;
     border-radius: 10px;
-    background-color: slategray;
+    background-color: #2c3138;
 }
 .wrap {
     display: flex;
@@ -50,10 +50,14 @@ html,body {
     height: 10px;
     width: 10px;
     margin: 0 2px;
-    background-color: darkblue;
+    background-color: cornflowerblue;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+    background-color: #2c3138;
+    border: 2px solid cornflowerblue;
 }
 .fade {
     animation-name: fade;
