@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="smile.ico">
     <link rel="stylesheet" href="slider.css">
     <title>Meme Slider</title>
 </head>
@@ -14,31 +15,36 @@
         <div class="slides fade">
             <img class="picture" src="Simpson.jpg" alt="Simpson_programmer">
         </div>
-
         <div class="slides fade">
             <img class="picture" src="Baby.jpg" alt="Baby_programmer">
         </div>
-
         <div class="slides fade">
             <img class="picture" src="Chatgpt.jpg" alt="Chat_GPT">
         </div>
-
         <div class="slides fade">
             <img class="picture" src="Code_more.jpg" alt="Code_more">
         </div>
         </div>
         <div class="low">
             <div class="description">
-                <span class="text">Normal people VS Programmers</span>
-                <span class="text">A new programmer is born</span>
-                <span class="text">When you use ChatGPT</span>
-                <span class="text">How to get better at coding</span>
+                <div class="text fade">
+                    <span>Normal people VS Programmers</span>
+                </div>
+                <div class="text fade">
+                    <span>A new programmer is born</span>
+                </div>
+                <div class="text fade">
+                    <span>When you use ChatGPT</span>
+                </div>
+                <div class="text fade">
+                    <span>How to get better at coding</span>
+                </div>
             </div>
             <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-                <span class="dot" onclick="currentSlide(4)"></span>
+                <span id="btn-1" class="dot" onclick="currentSlide(1, 1)"></span>
+                <span id="btn-2" class="dot" onclick="currentSlide(2, 2)"></span>
+                <span id="btn-3" class="dot" onclick="currentSlide(3, 3)"></span>
+                <span id="btn-4" class="dot" onclick="currentSlide(4, 4)"></span>
             </div>
         </div>
     </div>

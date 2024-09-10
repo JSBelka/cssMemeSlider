@@ -11,7 +11,7 @@ html,body {
     top: 18%;
     height: 64%;
     width: 30%;
-    border: solid 4px #c5c9e8;
+    border: solid 6px #c5c9e8;
     border-radius: 10px;
     background-color: #111859;
 }
@@ -21,6 +21,7 @@ html,body {
     padding: 5%;
     margin: auto;
     height: 96%;
+    gap: 5%
 }
 .container-slides {
     display: flex;
@@ -49,11 +50,17 @@ html,body {
     text-align: start;
 }
 .description {
+    display: none;
     width: 80%;
 }
 .dots {
-    width: 20%;
-    text-align: end;
+    width: 30%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
 }
 .dot {
     cursor: pointer;
@@ -71,7 +78,11 @@ html,body {
 }
 .fade {
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 2s;
+}
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 @media screen and (max-width: 800px) {
@@ -81,17 +92,16 @@ html,body {
         height: 56%;
         width: 60%;
     }
-
 }
 @media screen and (max-width: 320px) {
     .container {
-        left: 10%;
+        left: 7%;
         top: 22%;
         height: 56%;
-        width: 80%;
+        width: 86%;
     }
     .dot {
         height: 7px;
         width: 7px;
-
+    }
 }
