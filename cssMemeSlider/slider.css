@@ -12,24 +12,29 @@ html,body {
     height: 64%;
     width: 30%;
     border: solid 6px #c5c9e8;
-    border-radius: 10px;
+    border-radius: 1rem;
     background-color: #111859;
 }
 .wrap {
     display: flex;
     flex-direction: column;
-    padding: 5%;
+    padding: 3%;
     margin: auto;
     height: 96%;
-    gap: 5%
+    gap: 8%
 }
 .container-slides {
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     height: 80%;
 }
-.slides {
-    display: none;
+.slide {
+    position: absolute;
+    height: 100%;
+    width: 85%;
+    transition: opacity 0.5s ease;
 }
 .picture {
     text-align: center;
@@ -41,17 +46,18 @@ html,body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap-reverse;
-}
-.text {
-    color: whitesmoke;
-    font-size: 14px;
-    text-align: start;
+    height: 12%;
 }
 .description {
-    display: none;
-    width: 80%;
+    width: 70%;
+    overflow: hidden;
+    transition: opacity 2s ease;
+}
+.text {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 1rem;
 }
 .dots {
     width: 30%;
@@ -59,7 +65,6 @@ html,body {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    align-items: center;
     flex-wrap: nowrap;
 }
 .dot {
@@ -72,36 +77,66 @@ html,body {
     display: inline-block;
     transition: background-color 0.6s ease;
 }
-.active, .dot:hover {
+.dot.active {
     background-color: #111859;
     border: 2px solid #c5c9e8;
 }
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;
+.slide.active {
+    opacity: 1;
+    z-index: 1;
 }
+.slide:not(.active) {
+    opacity: 0;
+    z-index: 0;
+}
+.text.active {
+    opacity: 1;
+    z-index: 1;
+}
+.text:not(.active) {
+    opacity: 0;
+    z-index: 0;
+}
+
 @keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .container {
         left: 20%;
         top: 22%;
         height: 56%;
         width: 60%;
     }
+    .description {
+        width: 80%;
+    }
+    .low {
+        align-items: center;
+    }
+    .wrap {
+        gap: 3%;
+    }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 500px) {
     .container {
         left: 7%;
         top: 22%;
         height: 56%;
         width: 86%;
     }
-    .dot {
-        height: 7px;
-        width: 7px;
+    .description {
+        width: 80%;
+    }
+    .low {
+        align-items: center;
+    }
+    .wrap {
+        gap: 3%;
+    }
+    .slide {
+        width: 100%;
     }
 }
