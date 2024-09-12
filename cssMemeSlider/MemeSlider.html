@@ -2,9 +2,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="smile.ico">
+    <link rel="stylesheet" href="slider.css">
     <title>Meme Slider</title>
 </head>
 <body>
-
+<div class="container">
+    <div class="wrap">
+        <div class="container-slides">
+        <div class="slide active">
+            <img class="picture" src="Simpson.jpg" alt="Simpson_programmer">
+        </div>
+        <div class="slide">
+            <img class="picture" src="Baby.jpg" alt="Baby_programmer">
+        </div>
+        <div class="slide">
+            <img class="picture" src="Chatgpt.jpg" alt="Chat_GPT">
+        </div>
+        <div class="slide">
+            <img class="picture" src="Code_more.jpg" alt="Code_more">
+        </div>
+        </div>
+        <div class="low">
+            <div class="description">
+                <div class="text active">
+                    <span>Normal people VS Programmers</span>
+                </div>
+                <div class="text">
+                    <span>A new programmer is born</span>
+                </div>
+                <div class="text">
+                    <span>When you use ChatGPT</span>
+                </div>
+                <div class="text">
+                    <span>How to get better at coding</span>
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot active" data-slide-index="0"></span>
+                <span class="dot" data-slide-index="1"></span>
+                <span class="dot" data-slide-index="2"></span>
+                <span class="dot" data-slide-index="3"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="slider.js"></script>
 </body>
 </html>
